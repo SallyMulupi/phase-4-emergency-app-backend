@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     end
     def show 
         user=User.find_by(id: params[:id])
-        render json: user, serializer: HeroAndPowersSerializer, status: :ok
+        render json: user, serializer: UserAndReportSerializer, status: :ok
     end
     private
     def not_found_response
